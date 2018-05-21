@@ -17,7 +17,7 @@ class Contact extends Component {
             <div dangerouslySetInnerHTML={{__html: contactData.email}}/>
             <div dangerouslySetInnerHTML={{__html: contactData.social}}/>
             <MapWithAMarker
-                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM1ZUDXaHjt6NIkLXDRohRxOMbggyLe90&libraries=geometry,drawing,places"
                 containerElement={<div style={{ height: `600px`, width: `600px` }} />}
                 mapElement={<div style={{ height: `100%` }} />}
             />
