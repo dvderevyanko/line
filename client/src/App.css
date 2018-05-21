@@ -284,7 +284,7 @@
 		-ms-transform: scale(0.9);
 		-o-transform: scale(0.9);
 		transform: scale(0.9);
-		margin-left: -20px;
+		margin-left: 20px;
 	}
   .taddr_right {
     float: right;
@@ -313,7 +313,7 @@
 		-ms-transform: scale(0.7);
 		-o-transform: scale(0.7);
 		transform: scale(0.7);
-		margin-left: -60px;
+		margin-left: 60px;
  }
 	.top-line a {
 		font-size: 16px;
@@ -327,7 +327,8 @@
 /*article section*/
 .home_items {
   background-color: #D6D6D6;
-  padding: 40px 0 50px;
+  /*padding: 40px 0px 50px 0px;*/
+  padding-top: 40px;
   margin-top: 40px;
 }
 
