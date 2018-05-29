@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import NavBar from './components/common/NavBar';
-import Footer from './components/common/Footer';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import './App.css';
-import Main from './components/Main';
-import About from './components/About';
-import PriceList from './components/PriceList';
-import AppCarousel from './components/common/AppCarousel';
-import ContactPanel from './components/common/ContactPanel';
+import Main from './main/Main';
+import About from './about/About';
+import PriceList from './price/PriceList';
+import AppCarousel from './components/AppCarousel';
+import ContactPanel from './components/ContactPanel';
 import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux';
-import { history } from './reducers/store';
+import { history } from './root/store';
 import {connect} from 'react-redux';
-import Contact from './components/Contact';
-import Partner from './components/Partner';
+import Contact from './contact/Contact';
+import Partner from './partner/Partner';
 
 
 //https://react-bootstrap.github.io/components.html#media-content

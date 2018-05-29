@@ -1,7 +1,7 @@
-import {SET_PRICELIST_CONTENT} from '../constants/constants'
-import {SET_PRICELIST_CONTENT_START} from '../constants/constants'
-import {SET_PRICELIST_CONTENT_SUCCESS} from '../constants/constants'
-import {SET_PRICELIST_CONTENT_FAIL} from '../constants/constants'
+import {SET_PRICELIST_CONTENT} from './constants'
+import {SET_PRICELIST_CONTENT_START} from './constants'
+import {SET_PRICELIST_CONTENT_SUCCESS} from './constants'
+import {SET_PRICELIST_CONTENT_FAIL} from './constants'
 import fetch from 'cross-fetch'
 
 //https://redux.js.org/advanced/async-actions#actions

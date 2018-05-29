@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 import app from './app';
-import main from './main';
-import about from './about';
-import contact from './contact';
-import partner from './partner';
-import priceList from './priceList';
+import main from '../main/reducer';
+import about from '../about/reducer';
+import contact from '../contact/reducer';
+import partner from '../partner/reducer';
+import priceList from '../price/reducer';
 import { routerReducer, routerMiddleware} from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 

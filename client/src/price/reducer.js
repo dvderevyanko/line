@@ -1,9 +1,7 @@
-import {SET_PRICELIST_CONTENT} from '../constants/constants'
-import {SET_PRICELIST_CONTENT_START} from '../constants/constants'
-import {SET_PRICELIST_CONTENT_SUCCESS} from '../constants/constants'
-import {SET_PRICELIST_CONTENT_FAIL} from '../constants/constants'
-import repairBrakeCaliper from '../components/template/pricelist/repairBrakeCaliper'
-import mainPricelist from '../components/template/pricelist/mainPricelist'
+import {SET_PRICELIST_CONTENT} from './constants'
+import {SET_PRICELIST_CONTENT_START} from './constants'
+import {SET_PRICELIST_CONTENT_SUCCESS} from './constants'
+import {SET_PRICELIST_CONTENT_FAIL} from './constants'
 
 const initialState = {
     navList : [],

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import MainContent from './common/MainContent';
+import MainContent from './MainContent';
 import { Carousel } from 'react-bootstrap';
-import CardArticleContainer from './common/CardArticleContainer';
-import CardNavigationContainer from './common/CardNavigationContainer';
+import CardArticleContainer from '../components/CardArticleContainer';
+import CardNavigationContainer from '../components/CardNavigationContainer';
 import { connect } from 'react-redux';
 
 class Main extends Component {

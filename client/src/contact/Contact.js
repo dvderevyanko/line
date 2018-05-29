@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {MapWithAMarker} from './common/Map'
+import {MapWithAMarker} from './Map'
 
 class Contact extends Component {
   render() {
