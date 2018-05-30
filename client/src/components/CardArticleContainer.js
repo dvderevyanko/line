@@ -10,8 +10,8 @@ export default class CardArticleContainer extends Component {
         <div className="col-md-4 col-sm-6">
           <div className="hi_item">
 							<h3>Антикоррозийная обработка</h3>
-							<a href="/assets/card1.jpg" >
-              <img src="/assets/card1.jpg" className="img-responsive"/></a>
+							<a href="/assets/work/card1.jpg" >
+              <img src="/assets/work/card1.jpg" className="img-responsive"/></a>
 							<div className="order clearfix">
 								<div className="price">от 2000 <i className="fa fa-rub"></i></div>
 								<a href="#order" className="button b_buy">Посмотреть</a>

@@ -7,9 +7,9 @@ export default class MainCarousel extends Component {
           <Carousel nextIcon='' prevIcon=''>
             {this.props.data.map((obj, index) => {
               return <Carousel.Item key={index}>
-                        <img style={{width: '100%'}} src={obj.img} />
+                        <img style={{width: '100%'}} src={obj.image} />
                         <Carousel.Caption>
-                          <h3>{obj.title}</h3>
+                          <h3>{obj.description}</h3>
                           <p>{obj.text}</p>
                         </Carousel.Caption>
                       </Carousel.Item>

@@ -11,11 +11,11 @@ class Contact extends Component {
           <div className="page-content-title">{contactData.title} </div>
           <div className="contact-content">
             <div dangerouslySetInnerHTML={{__html: contactData.companyName}}/>
+            <div dangerouslySetInnerHTML={{__html: contactData.unp}}/>
             <div dangerouslySetInnerHTML={{__html: contactData.phones}}/>
             <div dangerouslySetInnerHTML={{__html: contactData.address}}/>
             <div dangerouslySetInnerHTML={{__html: contactData.schedule}}/>
             <div dangerouslySetInnerHTML={{__html: contactData.email}}/>
-            <div dangerouslySetInnerHTML={{__html: contactData.social}}/>
             <MapWithAMarker
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM1ZUDXaHjt6NIkLXDRohRxOMbggyLe90&libraries=geometry,drawing,places"
                 containerElement={<div style={{ height: `600px`, width: `600px` }} />}

@@ -75,6 +75,32 @@ function applyPriceContent(navId, result, res) {
 };
 
 
+app.get('/api/app', (req, res) => {
+  var result = {
+    carouselData : [],
+    contactData : [],
+    //title : '',  
+    keywords : '',
+    desciption : ''
+  };
+  db.all("SELECT * FROM carousel", function (err, rows) {
+    rows.forEach((element) => {
+      result.carouselData.push(element);
+    });   
+    db.all("SELECT * FROM app", function (err, rows) {
+      result.contactData = {
+        logo : rows[0].logo,
+        city : rows[0].city,
+        street : rows[0].street,
+        phones : rows[0].phones.split(','),
+      }; 
+      result.keywords = rows[0].keywords;
+      result.desciption = rows[0].desciption;
+      res.send(result);
+    }); 
+  }); 
+});
+
 
 /*app.get('/api2/price/:id', (req, res) => {
   db.all("SELECT * FROM price WHERE id = " + req.params.id, function(err, rows) {

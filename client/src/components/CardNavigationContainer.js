@@ -8,7 +8,7 @@ export default class CardNavigationContainer extends Component {
       <div className="container">
         <Row className="card-nav-title">
           <Col>
-            <h2>Услуги мастерской <strong>Авто</strong><span>Ремонт</span></h2>
+            <h2>Услуги мастерской <strong>Линия</strong><span>Сервиса</span></h2>
           </Col>
         </Row>
         <Row >

@@ -9,10 +9,11 @@ import AppCarousel from './components/AppCarousel';
 import ContactPanel from './components/ContactPanel';
 import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux';
-import { history } from './root/store';
+import { history } from './app/store';
 import {connect} from 'react-redux';
 import Contact from './contact/Contact';
 import Partner from './partner/Partner';
+import {setAppContent} from "./app/actions"
 
 
 //https://react-bootstrap.github.io/components.html#media-content
@@ -21,9 +22,10 @@ class App extends Component {
   //add property to package json for development
 	//"proxy" : "http://localhost:5000",
   componentDidMount() {
-    this.callApi()
+    
+    /*this.callApi()
       .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
+      .catch(err => console.log(err));*/
   }
 
   callApi = async () => {
@@ -33,8 +35,11 @@ class App extends Component {
 	  console.log(body);
     return body;
   };
-	
-	
+
+  componentWillMount() {
+    this.props.onSetAppContent();
+  }
+
   render() {
     let appData = this.props.app;
     return (
@@ -70,4 +75,12 @@ const mapToStateProps = state => {
   }
 }
 
-export default connect(mapToStateProps/*, mapDispatchToProps*/)(App);
+const mapDispatchToProps = dispatch => {
+  return {
+    onSetAppContent: () => {
+      dispatch(setAppContent())
+    }
+  }
+}
+
+export default connect(mapToStateProps, mapDispatchToProps)(App);

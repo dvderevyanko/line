@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import MainContent from './MainContent';
 import { Carousel } from 'react-bootstrap';
 import CardArticleContainer from '../components/CardArticleContainer';
 import CardNavigationContainer from '../components/CardNavigationContainer';

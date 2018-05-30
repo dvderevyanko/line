@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Accordion, AccordionItem} from 'react-sanfona';
 import {Row, Col} from 'react-bootstrap';
 import {connect} from 'react-redux';
-import {setPricelistContent} from "./pricelistActions"
+import {setPricelistContent} from "./actions"
 
 //https://github.com/daviferreira/react-sanfona
 class PriceList extends Component {
