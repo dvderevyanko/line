@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Link from 'react-router-dom/Link';
 //https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
-export default class Card extends Component {
+export default class NavCard extends Component {
   render() {
+    let data = this.props.data;
     return (
         <div className="mc_item inline">
-            <a href="/" className="inner">
-              <img src={this.props.img} className="inner"/>
-              <h4 className="inner">{this.props.title}</h4>
+            <a href={"/work/" + data.id} className="inner">
+              <img src={data.icon} className="inner"/>
+              <h4 className="inner">{data.title}</h4>
             </a>
             <div className="mc_toggle inner"/>
           </div>

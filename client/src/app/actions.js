@@ -12,11 +12,9 @@ export function setAppContent(id) {
             .then((response) => response.json())
             .then((responseJson) => {
                 console.log("success");
-                debugger;
                 dispatch(setAppContentSuccess(responseJson));
             })
             .catch((error) => {
-                debugger;
                 dispatch(setAppContentFail("извините, при загрузке статического контента возникла ошибка."));
                 console.error(error);
             });

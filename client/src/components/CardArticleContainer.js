@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
-import {Row} from 'react-bootstrap';
-import Card from './Card'
+import { Row } from 'react-bootstrap';
+import ArtCard from './ArtCard'
 
 export default class CardArticleContainer extends Component {
   render() {
-      return (
-        <div className="container home_items" >
+    return (
+      <div className="container home_items" >
         <div className="row">
-        <div className="col-md-4 col-sm-6">
-          <div className="hi_item">
-							<h3>Антикоррозийная обработка</h3>
-							<a href="/assets/work/card1.jpg" >
-              <img src="/assets/work/card1.jpg" className="img-responsive"/></a>
-							<div className="order clearfix">
-								<div className="price">от 2000 <i className="fa fa-rub"></i></div>
-								<a href="#order" className="button b_buy">Посмотреть</a>
-							</div>
-							<p>Нам под силу виртуозное выполнение такого сложного автотехнического процесса, как антикоррозийная обработка автомобиля! Многие владельцы современных машин считают, что коррозия им не страшна, но это не так.</p>
-						</div>  
-            </div>  
+          <div className="col-md-4 col-sm-6">
+            {this.props.data.map((obj) => {
+              return <ArtCard data={obj}></ArtCard>
+            })}
+          </div>
         </div>
-        </div>
-      );
-      
+      </div>
+    );
+
   }
 }
 /*https://bootsnipp.com/snippets/GX62l

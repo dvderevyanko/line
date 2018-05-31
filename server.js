@@ -35,13 +35,13 @@ app.get('/api/hello2', (req, res) => {
 
 //load nav tree
 app.get('/api/price/:id', (req, res) => {
-  var result = {};
+  let result = {};
   if (req.params.id < 0) {
     db.all("SELECT id, name, parent FROM price WHERE id > -1 ORDER BY id ASC", function (err, rows) {
-      var result = {};
-      var tempNavList = [];
+      let result = {};
+      let tempNavList = [];
       rows.forEach((element) => {
-        var item = {
+        let item = {
           id: element.id,
           title: element.name,
           parent: element.parent
@@ -76,7 +76,7 @@ function applyPriceContent(navId, result, res) {
 
 
 app.get('/api/app', (req, res) => {
-  var result = {
+  let result = {
     carouselData : [],
     contactData : [],
     //title : '',  
@@ -98,6 +98,23 @@ app.get('/api/app', (req, res) => {
       result.desciption = rows[0].desciption;
       res.send(result);
     }); 
+  }); 
+});
+
+app.get('/api/work', (req, res) => {
+  db.all("SELECT id, title, short, image, icon, price FROM work", function (err, rows) {
+    let result = {
+      navCards : [],
+      artCards : []
+    };
+    rows.forEach((element) => {
+      if (!element.image && element.icon) {
+        result.navCards.push(element);
+      } else {
+        result.artCards.push(element);
+      }
+    }); 
+    res.send(result);
   }); 
 });
 

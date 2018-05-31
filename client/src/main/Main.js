@@ -4,14 +4,19 @@ import { Carousel } from 'react-bootstrap';
 import CardArticleContainer from '../components/CardArticleContainer';
 import CardNavigationContainer from '../components/CardNavigationContainer';
 import { connect } from 'react-redux';
+import {loadNavArtCards} from "./actions"
 
 class Main extends Component {
+  
+  componentWillMount() {
+    this.props.onLoadCards();
+  }
   render() {
     let mainData = this.props.main;
     return (
       <div>
         <div className="card-nav-section">
-          <CardNavigationContainer data={mainData.cards}></CardNavigationContainer>
+          <CardNavigationContainer data={mainData.navCards}></CardNavigationContainer>
         </div>
         <div className="main-middle-section">
           <div className="container" >
@@ -22,7 +27,7 @@ class Main extends Component {
           </div>
         </div>
         <div className="greyBackground">
-          <CardArticleContainer></CardArticleContainer>
+          <CardArticleContainer data={mainData.artCards}></CardArticleContainer>
         </div>
       </div>
 
@@ -36,15 +41,12 @@ const mapToStateProps = state => {
   }
 }
 
-/*const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
   return {
-    onSetYear: newYear => {
-      dispatch(setYear(newYear))
-    },
-    onRequest: newYear => {
-      dispatch(getPhotos(newYear))
+    onLoadCards: () => {
+      dispatch(loadNavArtCards())
     }
   }
-}*/
+}
 
-export default connect(mapToStateProps/*, mapDispatchToProps*/)(Main);
+export default connect(mapToStateProps, mapDispatchToProps)(Main);

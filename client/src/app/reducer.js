@@ -15,9 +15,7 @@ export default function app(state = initialState, action) {
             return Object.assign({}, state, {isLoading : true});
         }
         case SET_APP_CONTENT_SUCCESS : {
-            debugger;
             return Object.assign({}, state, action.payload);
-            //return { ...state, ...action.payload}
         }
         case SET_APP_CONTENT_FAIL : {
             return Object.assign({}, state, {error : action.payload});
@@ -25,22 +23,3 @@ export default function app(state = initialState, action) {
         default: return state;
     }
 }
-
-/*const initialState = {
-    carouselData : [
-        {
-            img : "assets/carousel/3.jpg",
-            title : "Гарантированное качество",
-            text : "Автосервис с безупречной репутацией."
-        },
-        {
-            img : "assets/carousel/2.jpg",
-            title : "Демократичные цены",
-            text : "Таких цен в городе больше нет."
-        }
-    ],
-    title : "test"
-}
-export default function app(state = initialState) {
-    return state;
-}*/

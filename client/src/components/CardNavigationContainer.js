@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Card from './Card'
+import NavCard from './NavCard'
 
 export default class CardNavigationContainer extends Component {
   render() {
@@ -13,8 +13,8 @@ export default class CardNavigationContainer extends Component {
         </Row>
         <Row >
           <Col>
-            {this.props.data.map((obj, index) => {
-              return <Card key={index} img={obj.img} href={obj.href} title={obj.title} text={obj.text} button={obj.button}></Card>
+            {this.props.data.map((obj) => {
+              return <NavCard data={obj}></NavCard>
             })}
           </Col>
         </Row>

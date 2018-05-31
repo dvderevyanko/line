@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import app from './app';
+import app from './reducer';
 import main from '../main/reducer';
 import about from '../about/reducer';
 import contact from '../contact/reducer';
