@@ -40,7 +40,7 @@ export default class NavBar extends Component {
                 <NavLink className="main" to="/main">Главная</NavLink >
                 <NavLink className="about-nav" to="/about">О нас</NavLink >
                 <NavLink className="price" to="/pricelist">Цены</NavLink >
-                <NavLink className="work" to="/2">Наши работы</NavLink >
+                <NavLink className="work" to="/work">Наши работы</NavLink >
                 <NavLink className="partner" to="/partner">Партнеры</NavLink >
                 <NavLink className="contact" to="/contact">Контакты</NavLink >
                 </div>

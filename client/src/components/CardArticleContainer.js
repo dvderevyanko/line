@@ -9,7 +9,7 @@ export default class CardArticleContainer extends Component {
         <div className="row">
           <div className="col-md-4 col-sm-6">
             {this.props.data.map((obj) => {
-              return <ArtCard data={obj}></ArtCard>
+              return <ArtCard key={"cardart."+obj.id} data={obj}></ArtCard>
             })}
           </div>
         </div>

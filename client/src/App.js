@@ -13,6 +13,7 @@ import { history } from './app/store';
 import {connect} from 'react-redux';
 import Contact from './contact/Contact';
 import Partner from './partner/Partner';
+import Work from './work/Work';
 import {setAppContent} from "./app/actions"
 
 
@@ -59,6 +60,8 @@ class App extends Component {
                 <Route exact path='/contact' component={Contact}/>
                 <Route exact path='/partner' component={Partner}/>
                 <Route path='/pricelist' component={PriceList}/>
+                <Route exact path="/work" component={Work} />
+                <Route path="/work/:id" component={Work} />
               </Switch>
           
           <Footer></Footer>

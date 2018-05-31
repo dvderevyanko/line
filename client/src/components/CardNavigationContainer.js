@@ -14,7 +14,7 @@ export default class CardNavigationContainer extends Component {
         <Row >
           <Col>
             {this.props.data.map((obj) => {
-              return <NavCard data={obj}></NavCard>
+              return <NavCard key={"navcard."+obj.id} data={obj}></NavCard>
             })}
           </Col>
         </Row>

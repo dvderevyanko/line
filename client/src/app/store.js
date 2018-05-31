@@ -5,6 +5,7 @@ import about from '../about/reducer';
 import contact from '../contact/reducer';
 import partner from '../partner/reducer';
 import priceList from '../price/reducer';
+import work from '../work/reducer';
 import { routerReducer, routerMiddleware} from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
@@ -18,6 +19,7 @@ const appState = combineReducers({
     contactState: contact,
     partnerState: partner,
     priceListState: priceList,
+    workState: work,
     routerState: routerReducer,
 });
 

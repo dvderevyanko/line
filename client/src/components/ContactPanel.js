@@ -34,7 +34,7 @@ export default class ContactPanel extends Component {
                     } else {
                       operator = 'velcom ';
                     }
-                    return <strong><span>{operator}</span>{prefix}<span>{number}</span></strong>
+                    return <strong key={"controlpanel."+inx}><span>{operator}</span>{prefix}<span>{number}</span></strong>
                   })}
                   
                 </div>

@@ -7,7 +7,7 @@ import fetch from 'cross-fetch'
 export function loadNavArtCards(id) {
     return function (dispatch) {
         dispatch(loadNavArtCardsStart(id));
-        return fetch(`/api/work/`)
+        return fetch(`/api/work/all`)
             .then((response) => response.json())
             .then((responseJson) => {
                 console.log("success");

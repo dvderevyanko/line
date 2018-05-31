@@ -3,10 +3,10 @@ const express = require('express');
 const app = express();
 
 //comment for development
-const port = process.env.PORT || 5000;
+//const port = process.env.PORT || 5000;
 
 //prod version
-//const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const path = require('path');
 app.use(express.static(path.join(__dirname, '/client/build')));
 //end
@@ -101,7 +101,7 @@ app.get('/api/app', (req, res) => {
   }); 
 });
 
-app.get('/api/work', (req, res) => {
+app.get('/api/work/all', (req, res) => {
   db.all("SELECT id, title, short, image, icon, price FROM work", function (err, rows) {
     let result = {
       navCards : [],
@@ -119,33 +119,29 @@ app.get('/api/work', (req, res) => {
 });
 
 
-/*app.get('/api2/price/:id', (req, res) => {
-  db.all("SELECT * FROM price WHERE id = " + req.params.id, function(err, rows) {
-    var root = rows[0]; 
-    var result = {
-      id: root.id,
-      title: root.name,
-      content: root.content,
-      keywords: root.keywords,
-      description: root.description,
-      inner : []
+app.get('/api/work', (req, res) => {
+  db.all("SELECT id, title, short, image, price FROM work WHERE image NOT NULL AND image <> ''", function (err, rows) {
+    let result = {
+      artCards : []
     };
-    db.all("SELECT id, name FROM price WHERE parent = " + req.params.id, function(innerErr, innerRows) {
-      if (innerRows.length > 0) {
-        innerRows.forEach(function(element) {
-          console.log(element);
-          var innerRes = {
-            id: element.id,
-            title: element.name,
-          }
-          result.inner.push(innerRes);
-        });
-      }
-      res.send(result);
-    });
-  });
-});*/
+    rows.forEach((element) => {
+      result.artCards.push(element);
+    }); 
+    res.send(result);
+  }); 
+});
 
+app.get('/api/work/:id', (req, res) => {
+  db.all("SELECT id, title, content, keywords, description FROM work WHERE id == " + req.params.id, function (err, rows) {
+    let result = {
+      title : rows[0].title,
+      content : rows[0].content,
+      keywords : rows[0].keywords,
+      description : rows[0].description,
+    };
+    res.send(result);
+  }); 
+});
 
 db.serialize(function () {
   /*db.run("CREATE TABLE lorem (info TEXT)");
