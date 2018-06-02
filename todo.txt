@@ -1,0 +1,7 @@
+#add pop up map
+#fix images on small screen
+#footer
+#loading feature
+#comers counter
+#article link bug
+#исправить контакт
