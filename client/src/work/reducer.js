@@ -19,7 +19,7 @@ export default function work(state = initialState, action) {
         return Object.assign({}, state, {isLoading : true});
     }
     case LOAD_ART_CARDS_SUCCESS : {
-        return { ...state, ...action.payload}
+        return { ...state, ...action.payload, title : "Наши работы"}
     }
     case LOAD_ART_CARDS_FAIL : {
         return Object.assign({}, state, {error : action.payload});

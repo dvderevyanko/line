@@ -8,9 +8,10 @@ export default class CardArticleContainer extends Component {
       <div className="container home_items" >
         <div className="row">
           <div className="col-md-4 col-sm-6">
-            {this.props.data.map((obj) => {
-              return <ArtCard key={"cardart."+obj.id} data={obj}></ArtCard>
-            })}
+            { //don;t show any card until data prrovided
+              /*this.props.data.map((obj) => {
+              return <ArtCard key={"cardart."+obj.id} data={obj} action={this.props.action}></ArtCard>
+            })*/}
           </div>
         </div>
       </div>

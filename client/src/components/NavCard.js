@@ -11,7 +11,7 @@ export default class NavCard extends Component {
           <img src={data.icon} className="inner" />
           <h4 className="inner">{data.title}</h4>
         </NavLink >
-        <div className="mc_toggle inner" />
+        {/*<div className="mc_toggle inner" />*/}
       </div>
     );
   }

@@ -10,9 +10,9 @@ class About extends Component {
         <div className="container">
           <div className="page-content-title">{aboutData.title} </div>
           <div dangerouslySetInnerHTML={{__html: aboutData.contentHeader}} className="about"/>
-          <img src={aboutData.imageHeader} className="inner"/>
+          <img src={aboutData.imageHeader} className="img-responsive"/>
           <div dangerouslySetInnerHTML={{__html: aboutData.contentBody}} className="about"/>
-          <img src={aboutData.imageFooter} className="inner"/>
+          <img src={aboutData.imageFooter} className="img-responsive"/>
           <div dangerouslySetInnerHTML={{__html: aboutData.contentFooter}} className="about"/>
         </div>
       </div>

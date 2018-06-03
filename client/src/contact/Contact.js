@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {MapWithAMarker} from './Map'
+import ServiceMap from '../components/ServiceMap'
 
 class Contact extends Component {
   render() {
@@ -16,11 +16,7 @@ class Contact extends Component {
             <div dangerouslySetInnerHTML={{__html: contactData.address}}/>
             <div dangerouslySetInnerHTML={{__html: contactData.schedule}}/>
             <div dangerouslySetInnerHTML={{__html: contactData.email}}/>
-            <MapWithAMarker
-                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM1ZUDXaHjt6NIkLXDRohRxOMbggyLe90&libraries=geometry,drawing,places"
-                containerElement={<div style={{ height: `600px`, width: `600px` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
-            />
+            <ServiceMap/>
           </div>  
         </div>  
       </div>

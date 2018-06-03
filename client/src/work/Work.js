@@ -23,14 +23,20 @@ class Work extends Component {
   render() {
     let workData = this.props.work;
     let content;
+    let back;
+
     if (workData.artCards.length > 0) {
-      content = <CardArticleContainer data ={workData.artCards}></CardArticleContainer>;
+      content = <CardArticleContainer data ={workData.artCards} 
+        action={(id) => this.props.onLoadArticle(id)}></CardArticleContainer>;
     } else {
       content = <div dangerouslySetInnerHTML={{__html: workData.content}} className="about"/>;
+      back = <div className="button back" onClick={() => this.props.onLoadArtCards()}>Вернуться к списку</div>
     }
+
     return (
       <div className="greyBackground">
         <div className="container">
+          {back}
           <div className="page-content-title">{workData.title} </div>
           {content}
         </div>
