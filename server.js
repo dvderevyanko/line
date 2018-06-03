@@ -1,7 +1,6 @@
 const express = require('express');
 
 const app = express();
-
 //comment for development
 //const port = process.env.PORT || 5000;
 
@@ -17,8 +16,6 @@ app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
-
-
 //https://github.com/mapbox/node-sqlite3/blob/master/examples/simple-chaining.js
 //https://github.com/mapbox/node-sqlite3/wiki/API#databasegetsql-param--callback
 
@@ -30,8 +27,6 @@ app.get('/api/hello2', (req, res) => {
     res.send(rows);
   });
 });
-
-
 
 //load nav tree
 app.get('/api/price/:id', (req, res) => {
@@ -142,6 +137,10 @@ app.get('/api/work/:id', (req, res) => {
     res.send(result);
   }); 
 });
+
+app.get('*', function (request, response){
+  response.sendFile(path.join(__dirname, '/client/build/index.html'))
+})
 
 db.serialize(function () {
   /*db.run("CREATE TABLE lorem (info TEXT)");

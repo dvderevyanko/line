@@ -19,6 +19,8 @@ import {setAppContent} from "./app/actions"
 
 //https://react-bootstrap.github.io/components.html#media-content
 //https://medium.com/byte-sized-react/hosting-react-and-a-rest-api-with-express-28f7ba5a4cc4
+//routes
+//https://stackoverflow.com/questions/32128978/react-router-no-not-found-route
 class App extends Component {
   //add property to package json for development
 	//"proxy" : "http://localhost:5000",
@@ -59,11 +61,12 @@ class App extends Component {
                 <Route exact path='/about' component={About}/>
                 <Route exact path='/contact' component={Contact}/>
                 <Route exact path='/partner' component={Partner}/>
-                <Route path='/pricelist' component={PriceList}/>
+                <Route exact path='/pricelist' component={PriceList}/>
                 <Route exact path="/work" component={Work} />
-                <Route path="/work/:id" component={Work} />
+                {/*changed to exact */}
+                <Route exact path="/work/:id" component={Work} />
+                <Route path='*' exact={true} component={Main} />
               </Switch>
-          
           <Footer></Footer>
         </div>
       </ConnectedRouter>
