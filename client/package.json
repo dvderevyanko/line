@@ -2,7 +2,7 @@
   "name": "auto",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+    "dependencies": {
     "babel-polyfill": "^6.26.0",
     "cross-fetch": "^2.2.0",
     "history": "^4.7.2",
