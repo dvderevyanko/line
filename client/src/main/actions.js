@@ -14,7 +14,6 @@ export function loadNavArtCards(id) {
                 dispatch(loadNavArtCardsSuccess(responseJson));
             })
             .catch((error) => {
-                debugger;
                 dispatch(loadNavArtCardsFail("извините, при загрузке карточек возникла ошибка."));
                 console.error(error);
             });
