@@ -1,7 +1,7 @@
 const initialState = {
     title : "о нас",
-    contentHeader : `<p>Раздел заполняется</p>`
-    /*contentHeader : `<p>В автосервисе на Кленковской, повышению качества услуг, уделяется особое внимание. 
+    /*contentHeader : `<p>Раздел заполняется</p>`
+    contentHeader : `<p>В автосервисе на Кленковской, повышению качества услуг, уделяется особое внимание. 
     На рынке автосервиса присутствует жесткая конкуренция, в условиях которой, качество является основным 
     фактором успеха и позволяет нам расширять круг клиентов, гарантируя им стабильность в высоком качестве услуг. 
     Техническим отделом контролируется каждый этап работ.</p>`,
@@ -14,6 +14,14 @@ const initialState = {
     Мы работаем для Вас!</p>`,
     imageHeader : "assets/about/about1.jpg",
     imageFooter : "assets/about/about2.jpg"*/
+    text1 : `<p style="text-align:center;">У нас только высокоточное оборудование</p>`,
+    image1 : "assets/about/about1.jpg",
+    text2 : `<p style="text-align:center;">У нас только высококвалифицированный персонал</p>`,
+    image2 : "assets/about/about2.jpg",
+    text3 : `<p style="text-align:center;">У нас Вы можете отдохнуть в кафе пока ремонтируется Ваш автомобиль</p>`,
+    image3 : "assets/about/about3.jpg",
+    text4 : `<p></p>`,
+    image4 : "assets/about/about4.jpg"
 }
 export default function about(state = initialState) {
     return state;
