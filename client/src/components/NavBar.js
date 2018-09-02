@@ -32,10 +32,15 @@ export default class NavBar extends Component {
                 onClick={() => this.showMenu()}>&#9776;   меню</a>
               <span className="empty"></span>
               <div className="waranty" ref="waranty">
-                <div className="waranty-left"><span>1</span> год</div>
+                <div className="waranty-right">Гарантия&nbsp;<br/>качества!</div>
+              </div>
+              <div className="services_mnu" ref="notMain"><NavLink  to="/main">Услуги автосервиса</NavLink ></div>  
+              {/*<span className="empty"></span>
+              <div className="waranty" ref="waranty">
+                {<div className="waranty-left"><span>1</span> год</div>
                 <div className="waranty-right">Гарантия <br />на все работы</div>
               </div>
-              <div className="services_mnu" ref="notMain"><NavLink  to="/main">Услуги автосервиса</NavLink ></div>
+              <div className="services_mnu" ref="notMain"><NavLink  to="/main">Услуги автосервиса</NavLink ></div>*/}
               <div onClick={(e) => this.navHandler(e)}>
                 <NavLink className="main" to="/main">Главная</NavLink >
                 <NavLink className="about-nav" to="/about">О нас</NavLink >

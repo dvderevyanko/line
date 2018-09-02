@@ -42,11 +42,11 @@ export default class ContactPanel extends Component {
                     let number = phone.substring(6, phone.lenght);
                     let operator;
                     if (inx == 0) {
-                      operator = 'life ';
-                    } else if (inx == 1) {
                       operator = 'mts ';
-                    } else {
+                    } else if (inx == 1) {
                       operator = 'velcom ';
+                    } else {
+                      operator = 'life ';
                     }
                     return <strong key={"controlpanel." + inx}><span>{operator}</span>{prefix}<span>{number}</span></strong>
                   })}

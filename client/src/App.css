@@ -151,6 +151,11 @@
 
 /* start top menu*/
 .waranty-right {
+  /*start rem*/
+  margin-left: 20px;
+  margin-right: 20px;
+  /*end rem for left*/
+  text-align: center;
   font-family: "RobotoCondensedRegular";
 }
 
