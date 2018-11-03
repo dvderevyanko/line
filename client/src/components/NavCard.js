@@ -5,12 +5,16 @@ import {NavLink } from 'react-router-dom';
 export default class NavCard extends Component {
   render() {
     let data = this.props.data;
+    var tempStyle = {color:'white'};
     return (
       <div className="mc_item inline">
-        <NavLink className="main" to={"/work/" + data.id}>
+        {/*<NavLink className="main" to={"/work/" + data.id}>*/}
+        <div>
           <img src={data.icon} className="inner" />
-          <h4 className="inner">{data.title}</h4>
-        </NavLink >
+          {/*<h4 className="inner">{data.title}</h4>*/}
+          <h4 style={tempStyle}>{data.title}</h4>
+        </div>  
+        {/*</NavLink >*/}
         {/*<div className="mc_toggle inner" />*/}
       </div>
     );

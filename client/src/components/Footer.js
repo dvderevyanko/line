@@ -24,13 +24,13 @@ export default class Footer extends Component {
                                     <Link to="/about">О нас</Link >
                                 </li>
 
-                                <li>
+                                {/*<li>
                                     <Link to="/pricelist">Цены</Link >
                                 </li>
 
                                 <li>
                                     <Link to="/work">Наши работы</Link >
-                                </li>
+                                </li>*/}
                             </ul>
                         </div>
                         <div className="col-md-4 col-sm-6 col-xs-12">

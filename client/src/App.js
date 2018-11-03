@@ -60,11 +60,11 @@ class App extends Component {
                 <Route exact path='/main' component={Main}/>
                 <Route exact path='/about' component={About}/>
                 <Route exact path='/contact' component={Contact}/>
-                <Route exact path='/partner' component={Partner}/>
+                {/*<Route exact path='/partner' component={Partner}/>
                 <Route exact path='/pricelist' component={PriceList}/>
-                <Route exact path="/work" component={Work} />
+                <Route exact path="/work" component={Work} />*/}
                 {/*changed to exact */}
-                <Route exact path="/work/:id" component={Work} />
+                {/*<Route exact path="/work/:id" component={Work} />*/}
                 <Route path='*' exact={true} component={Main} />
               </Switch>
           <Footer></Footer>

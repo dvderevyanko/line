@@ -535,6 +535,14 @@
   margin-bottom: 10px;
 }
 
+.min-header {
+  font-family: "BebasRegular";
+  font-size: 30px;
+  font-weight: bold;
+  color: #050505;
+  margin-bottom: 10px;
+}
+
 p.desc {
   max-width: 790px;
   text-align: center;
